@@ -1,5 +1,5 @@
 from django.http import HttpResponse, JsonResponse
-
+from .models import YourModel
 def hello_world(request):
     return HttpResponse("Hello World 2!")
 
