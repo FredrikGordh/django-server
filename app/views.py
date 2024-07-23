@@ -8,6 +8,6 @@ def hello_world(request):
 def home(request):
     return HttpResponse("Welcome to the Homepage!")
 
-def data_view(request):
-    data = list(Product.objects.values())
-    return JsonResponse(data, safe=False)
+def product_list(request):
+    products = Product.objects.all()
+    return render(request, 'product_list.html', {'products': products})
