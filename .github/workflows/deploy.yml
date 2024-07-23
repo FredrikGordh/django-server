@@ -35,5 +35,4 @@ jobs:
         run:
             echo "machine api.heroku.com login ${{ secrets.HEROKU_EMAIL }} password ${{ secrets.HEROKU_API_KEY }}" > ~/.netrc
             echo "machine git.heroku.com login ${{ secrets.HEROKU_EMAIL }} password ${{ secrets.HEROKU_API_KEY }}" >> ~/.netrc
-            heroku git:remote -a ${{ secrets.HEROKU_APP_NAME }}
             git push heroku main
